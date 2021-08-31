@@ -19,7 +19,7 @@ class HorendBeasts extends React.Component{
             numOfVafr: this.state.numOfVafr + 1,
         });
     
-        this.props.handleShow();
+        this.props.handleShow(this.props.title, this.props.description, this.props.image_url);
         
     }
 
