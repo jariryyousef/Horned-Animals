@@ -14,9 +14,11 @@ class App extends React.Component {
   super(props);
 
     this.state = {
-      
-      state:false,
-    }
+      show:false,
+    };
+    this.title=" ";
+    this.desc=" ";
+    this.image=" ";
 
   }
 
@@ -25,14 +27,16 @@ class App extends React.Component {
 
     }
 
-    handleShow = () =>{ 
+    handleShow = (tit, des, img) =>{ 
       this.setState({show:true
-      
-      
       })
-
-    
+      this.title=tit;
+      this.desc=des;
+      this.image=img;
+      
+      
     }
+
 
 
   render(){
@@ -49,9 +53,11 @@ class App extends React.Component {
     <Footer/>
     <SelectedBeast
     handleClose={this.handleClose}
-    handleShow={this.handleShow}
+    // handleShow={this.handleShow}
     show = {this.state.show} 
-    
+    tit={this.title}
+    desc={this.desc}
+    img={this.image}
     />
     </div>
   );

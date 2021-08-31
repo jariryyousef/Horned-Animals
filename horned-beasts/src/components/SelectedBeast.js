@@ -12,16 +12,16 @@ class SelectedBeast extends React.Component {
                
                 <Modal show={this.props.show} onHide={this.props.handleClose}>
                     <Modal.Header closeButton>
-                        <Modal.Title>{this.props.title}</Modal.Title>
+                        <Modal.Title>{this.props.tit}</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>{this.props.description}</Modal.Body>
+                    <Modal.Body>
+                        <img src={this.props.img } style={{width:"450px" ,height:"400px"}}/>
+                        {this.props.desc}</Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={this.props.handleClose}>
                             Close
                         </Button>
-                        <Button variant="primary" onClick={this.props.handleClose}>
-                            Save Changes
-                        </Button>
+                        
                     </Modal.Footer>
                 </Modal>
             </div>
