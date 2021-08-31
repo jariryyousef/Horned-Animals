@@ -1,6 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Card from 'react-bootstrap/Card'
+import Card from 'react-bootstrap/Card';
 import Button from "react-bootstrap/Button";
 
 class HorendBeasts extends React.Component{
@@ -16,15 +16,17 @@ class HorendBeasts extends React.Component{
     numOfVafr = () =>{
         this.setState({
 
-            numOfVafr: this.state.numOfVafr + 1
-        })
+            numOfVafr: this.state.numOfVafr + 1,
+        });
+    
+        this.props.handleShow();
         
     }
 
 
 render(){
     return(
-<div>
+
         <Card style={{ width: '18rem' }}>
   <Card.Img  variant="top" src={this.props.image_url} onClick={this.numOfVafr} />
   <Card.Body>
@@ -36,7 +38,7 @@ render(){
     <p>❤️ {this.state.numOfVafr}</p>
   </Card.Body>
 </Card>
-</div>
+
         
     )
 
