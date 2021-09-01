@@ -19,7 +19,7 @@ class HorendBeasts extends React.Component{
             numOfVafr: this.state.numOfVafr + 1,
         });
     
-        this.props.handleShow(this.props.title, this.props.description, this.props.image_url);
+        this.props.handleShow(this.props.title, this.props.description, this.props.image_url,this.props.horns);
         
     }
 
@@ -28,11 +28,13 @@ render(){
     return(
 
         <Card style={{ width: '18rem' }}>
+
   <Card.Img  variant="top" src={this.props.image_url} onClick={this.numOfVafr} />
   <Card.Body>
     <Card.Title>{this.props.title}</Card.Title>
     <Card.Text>
     {this.props.description}
+    
     </Card.Text>
     <Button onClick={this.numOfVafr} variant="primary">Like</Button>
     <p>❤️ {this.state.numOfVafr}</p>

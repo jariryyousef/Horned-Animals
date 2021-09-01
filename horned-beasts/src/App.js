@@ -43,14 +43,17 @@ class App extends React.Component {
   return (
      <div className="App">
     <Header/>
+    
     <Main
+    
     array={array}
     // handleClose={this.handleClose}
     handleShow={this.handleShow}
-   
-    
-    />
+   />
+
+
     <Footer/>
+    
     <SelectedBeast
     handleClose={this.handleClose}
     // handleShow={this.handleShow}
