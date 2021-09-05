@@ -79,6 +79,18 @@ class Main extends React.Component {
 
 
         }
+        if (e.target.value == 'All') {
+            this.setState(
+                {
+                    filterArray:
+                       this.props.array,
+                }
+            );
+// console.log('alllll');s
+           
+
+
+        }
 
         // console.log(this.state.filterArray);
     }
